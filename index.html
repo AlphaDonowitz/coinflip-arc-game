@@ -176,7 +176,7 @@
                 await tx.wait();
                 console.log('✅ Tx confirmada!');
                 
-                // Hash encurtado + link clicável
+                // Hash encurtado + link clicável com innerHTML
                 resultEl.innerHTML = `🎉 Rodada processada! Hash: ${tx.hash.slice(0,10)}... <a href="https://testnet.arcscan.app/tx/${tx.hash}" target="_blank" style="color: #00d4ff; text-decoration: underline;">Ver no ArcScan</a>`;
                 statusEl.innerText = 'Confirmado! Verifique saldo.';
                 
