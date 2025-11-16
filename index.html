@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFlip - Arc Testnet Casino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div id="app" class="container">
+        <header class="header">
+            <h1><i class="fas fa-coins"></i> CoinFlip Arc</h1>
+            <p>Aposte 1 USDC em Cara ou Coroa. Ganhe 1.95x!</p>
+        </header>
+        <button id="connect" class="btn-connect">
+            <i class="fas fa-wallet"></i> Conectar Wallet
+        </button>
+        <p id="status" class="status"></p>
+        <div id="game" class="game-section" style="display:none;">
+            <div class="balance-card">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Saldo: <span id="balance">0</span> USDC</span>
+            </div>
+            <div class="coin-flip-area">
+                <button onclick="flip(true)" class="btn-flip heads">
+                    <i class="fas fa-head-side-virus"></i> Cara (Heads)
+                </button>
+                <button onclick="flip(false)" class="btn-flip tails">
+                    <i class="fas fa-tint"></i> Coroa (Tails)
+                </button>
+            </div>
+            <p id="result" class="result"></p>
+        </div>
+    </div>
+</body>
+</html>
